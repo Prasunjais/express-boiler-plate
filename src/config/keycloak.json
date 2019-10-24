@@ -1,13 +1,13 @@
 {
-    "realm": "ford",
-    "auth-server-url": "http://192.168.10.199:8080/auth",
-    "ssl-required": "external",
-    "resource": "ford",
-    "verify-token-audience": true,
-    "credentials": {
-        "secret": "397eb411-81c2-4fc7-8352-a7676fcaf4d9"
-    },
-    "use-resource-role-mappings": true,
-    "confidential-port": 0,
-    "policy-enforcer": {}
+  "realm": "demo",
+  "auth-server-url": "http://192.168.10.199:8080/auth",
+  "ssl-required": "external",
+  "resource": "demo",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "as7eb411-81c2-4fc7-8352-a7676fcaf4d9"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0,
+  "policy-enforcer": {}
 }
