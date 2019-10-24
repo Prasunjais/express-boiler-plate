@@ -33,7 +33,7 @@ class Response {
       prev[curr.path[0]] = curr.message.replace(/"/g, '');
       return prev;
     }, {});
-    let message = messageTypes.badRequest();
+    let message = messageTypes.joiValidation.badRequest;
     let status = responseStatus.HTTP_BAD_REQUEST;
     req.appLogger.error(`URL : ${req.protocol}://${req.get('host')}${req.originalUrl} | Request : ${JSON.stringify(req.value?req.value:{})} | BadRequestError : ${JSON.stringify(error)}`)
 

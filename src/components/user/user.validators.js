@@ -3,6 +3,8 @@ const BaseJoi = require('joi');
 // joi date extension 
 const Extension = require('joi-date-extensions');
 const Joi = BaseJoi.extend(Extension);
+// handling the joi response 
+const Response = require('../../responses/response');
 
 // generic option
 const options = {
@@ -37,8 +39,8 @@ exports.validateCreateRequest = (req, res, next) => {
     err.details.forEach(element => {
       error.push(element.message);
     });
-    return res.status(400).json({
-      error
-    });
+
+    // returning the response 
+    Response.joierrors(req, res, err);
   });
 };
