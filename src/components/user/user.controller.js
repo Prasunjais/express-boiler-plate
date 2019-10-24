@@ -40,6 +40,8 @@ class userController extends BaseController {
         status: 200,
         message: 'Its working'
       };
+
+      // success response 
       return this.success(req, res, this.status.HTTP_OK, resp);
 
       // catch any runtime error 
