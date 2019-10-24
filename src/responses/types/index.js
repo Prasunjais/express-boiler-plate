@@ -1,3 +1,3 @@
 module.exports = {
-  loggedInSuccess: 'User Logged In Successfully',
+  userAuthentication: require('./userAuthentication'), // including the user authentication message
 };

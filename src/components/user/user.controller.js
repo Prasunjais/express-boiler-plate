@@ -7,6 +7,12 @@ const {
 
 // getting the model 
 class userController extends BaseController {
+  // constructor 
+  constructor() {
+    super();
+    this.messageTypes = this.messageTypes.userAuthentication;
+  }
+
   // do something 
   doSomething = async (req, res) => {
     try {
