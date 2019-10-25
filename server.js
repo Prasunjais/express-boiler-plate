@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === 'development') {
 } else {
   if (cluster.isMaster) {
     log(`Master cluster setting up ${numCPUs} workers...`);
-    server = app.lsiten(port);
+    server = app.listen(port);
 
     for (let i = 0; i < numCPUs; i++) {
       cluster.fork();

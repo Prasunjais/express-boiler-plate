@@ -18,7 +18,7 @@ class SocketListeners {
         sock.on(Events.SUBSCRIBE, ({
           customerId
         }) => this.subscribe(sock, customerId));
-
+        // unsubscribed event 
         sock.on(Events.UN_SUBSCRIBE, ({
           customerId
         }) => this.unSubscribe(sock, customerId));

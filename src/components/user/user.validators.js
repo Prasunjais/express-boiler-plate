@@ -12,6 +12,7 @@ const schemas = {
     email: Joi.string().trim().label('email').required().max(256),
     password: Joi.string().trim().label('password').required().min(6).max(100),
   }),
+  
 };
 
 const options = {
@@ -54,4 +55,5 @@ module.exports = {
       Response.joierrors(req, res, err);
     });
   },
+
 }
