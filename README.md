@@ -17,5 +17,14 @@ Error Handling: can use custom or node boom
 
 express boiler plate, Component based with joi validation, winston api logger, seperated models with controllers and const response type with response message. 
 
-**Please drop a star if u like the boilerplate.**
+# Author
+Prasun Jaiswal
+
+# Contributing
+Please feel free to message me regarding updates or improvments. If you'd like to be a part of this, I'd be happy to look into it!
+
+# License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+* Please drop a star if u like the boilerplate.
 
