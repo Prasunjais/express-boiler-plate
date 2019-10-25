@@ -15,7 +15,7 @@ Error Handling: can use custom or node boom
 * mysql     -  2.17
 * objection -  1.6
 
-Component based with joi validation, winston api logger, seperated models with controllers and const response type with response message. 
+express boiler plate, Component based with joi validation, winston api logger, seperated models with controllers and const response type with response message. 
 
 **Please drop a star if u like the boilerplate.**
 
