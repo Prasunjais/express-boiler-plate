@@ -1,8 +1,9 @@
 # express-boiler-plate
+## start 
 ```
-##start     - npm start.
+npm start
 ```
-##framework - express
+## framework - express
 
 >UPDATE: Added Socket Support with Namespace and Channel.
 Error Handling: can use custom or node boom 
