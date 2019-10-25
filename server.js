@@ -1,6 +1,7 @@
 require('babel-register');
 require('babel-polyfill');
 
+const socket = require('./src/middleware/socket');
 const {
   join
 } = require('path');
@@ -28,13 +29,18 @@ process.on('unhandledRejection', (reason, p) =>
   error('Unhandled Rejection at: Promise ', p, reason)
 );
 
+let server;
+
+// checking the environment of the node 
 if (process.env.NODE_ENV === 'development') {
-  app.listen(port, () => {
-    info(chalk.blue(' [ ✓ ] ') + `Application Process ${process.pid} is listening to all incoming requests at: ${port} `);
+  server = app.listen(port, () => {
+    info(chalk.blue(' [ ✓ ] ') + `Application - Process ${process.pid} is listening to all incoming requests at: ${port} `);
   });
 } else {
   if (cluster.isMaster) {
     log(`Master cluster setting up ${numCPUs} workers...`);
+    server = app.lsiten(port);
+
     for (let i = 0; i < numCPUs; i++) {
       cluster.fork();
     }
@@ -48,8 +54,11 @@ if (process.env.NODE_ENV === 'development') {
       log('Starting a new worker');
       cluster.fork();
     });
+    // not a master cluster 
   } else {
-    app.listen(port);
+    server = app.listen(port);
     log(`Process ${process.pid} is listening to all incoming requests at: ${port}`);
   }
 }
+
+socket.init(server);

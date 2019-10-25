@@ -16,7 +16,7 @@ class userController extends BaseController {
   // do something 
   doSomething = async (req, res) => {
     try {
-      info('Trying to logging');
+      info('running the controller');
 
       const resp = {
         status: 200,

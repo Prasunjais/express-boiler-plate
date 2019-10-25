@@ -5,11 +5,21 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha --timeout 10000",
-    "start": "node server.js",
-    "dev": "nodemon server.js .env.dev",
-    "prod": "node server.js"
+    "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
+    "start:dev": "nodemon server.js .env.dev",
+    "start:prod": "node server.js .env.prod"
   },
-  "keywords": ["express", "folder structure", "boiler plate", "ORM", "Class Based", "Node js boilerplate", "boiler plate", "nodejs folder structure", "expressjs boiler plate"],
+  "keywords": [
+    "express",
+    "folder structure",
+    "boiler plate",
+    "ORM",
+    "Class Based",
+    "Node js boilerplate",
+    "boiler plate",
+    "nodejs folder structure",
+    "expressjs boiler plate"
+  ],
   "author": "Prasun Jaiswal",
   "license": "ISC",
   "dependencies": {
@@ -20,12 +30,14 @@
     "babel-register": "^6.26.0",
     "boom": "^7.3.0",
     "cors": "^2.8.5",
+    "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-boom": "^3.0.0",
     "express-joi-validation": "^4.0.1",
     "glob": "^7.1.5",
     "helmet": "^3.21.2",
+    "if-env": "^1.0.4",
     "ipware": "^2.0.0",
     "joi": "^14.3.1",
     "joi-date-extensions": "^1.2.0",
@@ -39,6 +51,7 @@
     "winston-daily-rotate-file": "^4.2.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "node-env-run": "^2.0.1"
   }
 }
