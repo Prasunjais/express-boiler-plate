@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --timeout 10000",
+    "test": "mocha src/test --timeout 10000",
     "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
     "start:dev": "nodemon server.js .env.dev",
     "start:prod": "node server.js .env.prod"
@@ -51,6 +51,9 @@
     "winston-daily-rotate-file": "^4.2.1"
   },
   "devDependencies": {
+    "mocha": "^6.2.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "nodemon": "^1.19.4",
     "node-env-run": "^2.0.1"
   }
