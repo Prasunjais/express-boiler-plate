@@ -25,9 +25,19 @@ process.on('SIGINT', () => {
   process.exit(1);
 });
 
+// uncaught promise rejection
 process.on('unhandledRejection', (reason, p) =>
   error('Unhandled Rejection at: Promise ', p, reason)
 );
+
+// uncaught exception 
+process.on('uncaughtException', (err, origin) => {
+  error(
+    process.stderr.fd,
+    `Caught exception: ${err}\n` +
+    `Exception origin: ${origin}`);
+});
+
 
 let server;
 
