@@ -4,10 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha src/test --timeout 10000",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch",
     "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
     "start:dev": "nodemon server.js .env.dev",
-    "start:prod": "node server.js .env.prod"
+    "start:prod": "node server.js .env.prod",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run dev",
+    "prepare": "husky install"
   },
   "keywords": [
     "express",
@@ -39,6 +44,7 @@
     "helmet": "^3.21.2",
     "if-env": "^1.0.4",
     "ipware": "^2.0.0",
+    "jest": "^26.6.3",
     "joi": "^14.3.1",
     "joi-date-extensions": "^1.2.0",
     "knex": "^0.19.5",
@@ -55,6 +61,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "nodemon": "^1.19.4",
-    "node-env-run": "^2.0.1"
+    "node-env-run": "^2.0.1",
+    "husky": "^6.0.0"
   }
 }
