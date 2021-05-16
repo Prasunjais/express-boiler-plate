@@ -2,7 +2,11 @@
 ## start 
 ```
 npm start
+npm run dev
+npm run rebuild
+npm run test
 ```
+
 ## framework - express
 
 >UPDATE: Added Socket Support with Namespace and Channel.
@@ -14,6 +18,8 @@ Error Handling: can use custom or node boom
 * moment    -  2.24
 * mysql     -  2.17
 * objection -  1.6
+* husky     -  6.0.0 
+* jest      - 26.6.3
 
 express boiler plate, Component based with joi validation, winston api logger, seperated models with controllers and const response type with response message. 
 
