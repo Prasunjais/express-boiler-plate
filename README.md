@@ -2,7 +2,11 @@
 ## start 
 ```
 npm start
+npm run dev
+npm run rebuild
+npm run test
 ```
+
 ## framework - express
 
 >UPDATE: Added Socket Support with Namespace and Channel.
