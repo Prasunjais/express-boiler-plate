@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --config ./jest.config.json",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test --watch",
     "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
     "start:dev": "nodemon server.js .env.dev",
     "start:prod": "node server.js .env.prod",
