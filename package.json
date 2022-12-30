@@ -57,7 +57,7 @@
     "winston-daily-rotate-file": "^4.2.1"
   },
   "devDependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "nodemon": "^1.19.4",
